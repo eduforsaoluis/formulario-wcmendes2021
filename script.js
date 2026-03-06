@@ -27,14 +27,9 @@ valido = false
 
 }
 
-if(!email.value.includes("@")){
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-email.classList.add("erro")
-valido = false
-
-}
-
-if (!email.value.includes(".")){
+if(!regexEmail.test(email.value)){
     email.classList.add("erro")
     valido = false
 }
